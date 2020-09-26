@@ -1,0 +1,1 @@
+In order to run the test, run first docker-compose up and then test.sh

@@ -1,0 +1,1 @@
+docker run -it --rm --network=host -v "$(pwd):/behave:ro"  williamyeh/behave

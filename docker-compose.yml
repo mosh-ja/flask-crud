@@ -11,8 +11,12 @@ services:
   app-service:
     build: .
     ports:
-      - "5000:5000"
+      - '5000:5000'
+    volumes:
+      - .:/app
     environment:
+      - LOGLEVEL=INFO
       - DB_CONN_STR=postgresql://user:pass@db-service:5432/db
     depends_on:
       - db-service
+    restart: always
